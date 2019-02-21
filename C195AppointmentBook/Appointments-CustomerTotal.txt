@@ -1,0 +1,6 @@
+Customer                                      Total Appointments                            
+************************************************************
+Bruce Banner                                             1 
+Natasha Romanoff                                             1 
+Tony Stark                                             1 
+

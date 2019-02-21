@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.NewAppointment">
+   <children>
+      <Text layoutX="124.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Appointment">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <VBox alignment="TOP_RIGHT" layoutX="23.0" layoutY="67.0" prefHeight="335.0" prefWidth="121.0" spacing="32.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment ID:" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Customer:" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Start Time:" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="End Time:" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Location:" />
+            <Text layoutX="74.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Type:" />
+         </children>
+      </VBox>
+      <VBox layoutX="151.0" layoutY="57.0" prefHeight="244.0" prefWidth="202.0" spacing="22.0">
+         <children>
+            <TextField fx:id="idTxtFld" maxWidth="200.0" />
+            <ComboBox fx:id="customerComboBx" prefWidth="200.0" promptText="Select a customer" />
+            <DatePicker fx:id="datePicker" prefHeight="27.0" prefWidth="203.0" />
+            <ComboBox fx:id="starttimeComboBx" onAction="#handleTimeSelection" prefWidth="200.0" promptText="Select a start time" />
+            <TextField fx:id="endTxtFld" layoutX="10.0" layoutY="10.0" maxWidth="200.0" />
+            <ComboBox fx:id="locationComboBx" onAction="#handleContactSelection" prefWidth="200.0" promptText="Select a location" />
+            <TextField fx:id="contactTxtFld" layoutX="10.0" layoutY="206.0" maxWidth="200.0" />
+            <ComboBox fx:id="apptComboBx" prefWidth="200.0" promptText="Select appointment type" />
+         </children>
+      </VBox>
+      <Button fx:id="clearBtn" layoutX="151.0" layoutY="446.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="57.0" text="Clear" />
+      <Button fx:id="submitBtn" layoutX="345.0" layoutY="438.0" mnemonicParsing="false" onAction="#handleSubmit" prefHeight="48.0" prefWidth="76.0" text="Submit" />
+      <Button fx:id="backBtn" layoutX="271.0" layoutY="446.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="28.0" prefWidth="57.0" text="Back" />
+   </children>
+</AnchorPane>

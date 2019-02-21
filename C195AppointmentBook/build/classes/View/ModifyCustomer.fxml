@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="420.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ModifyCustomer">
+   <children>
+      <VBox alignment="TOP_RIGHT" layoutX="92.0" layoutY="50.0" prefHeight="304.0" prefWidth="181.0" spacing="19.0">
+         <children>
+            <TextField fx:id="idTxtFld" />
+            <TextField fx:id="nameTxtFld" />
+            <TextField fx:id="addressTxtFld" />
+            <TextField fx:id="phoneTxtFld" />
+            <ComboBox fx:id="cityComboBx" onAction="#handleCitySelected" prefWidth="184.0" />
+            <ComboBox fx:id="countryComboBx" prefWidth="187.0" />
+            <TextField fx:id="activeTxtFld" />
+         </children>
+      </VBox>
+      <Text layoutX="79.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modify Contact">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <VBox alignment="TOP_RIGHT" layoutX="16.0" layoutY="54.0" prefHeight="202.0" prefWidth="63.0" spacing="30.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID:" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+            <Text lineSpacing="4.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address:" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Phone:" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="City:" />
+            <Text layoutX="31.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country:" />
+            <Text layoutX="31.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Active:" />
+         </children>
+      </VBox>
+      <Button fx:id="clearBtn" layoutX="42.0" layoutY="372.0" mnemonicParsing="false" onAction="#handleClearBtn" text="Clear" />
+      <Button fx:id="updateBtn" layoutX="218.0" layoutY="362.0" mnemonicParsing="false" onAction="#handleUpdateBtn" prefHeight="47.0" prefWidth="72.0" text="Update" />
+      <Button fx:id="backBtn" layoutX="102.0" layoutY="372.0" mnemonicParsing="false" onAction="#handleBackBtn" prefHeight="27.0" prefWidth="53.0" text="Back" />
+   </children>
+</AnchorPane>

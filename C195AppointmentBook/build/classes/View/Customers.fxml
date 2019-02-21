@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.CustomerController">
+   <children>
+      <Text layoutX="305.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customers">
+         <font>
+            <Font name="Bradley Hand Bold" size="36.0" />
+         </font>
+      </Text>
+      <TableView fx:id="customerTbl" layoutX="18.0" layoutY="60.0" prefHeight="330.0" prefWidth="740.0">
+        <columns>
+          <TableColumn fx:id="customerIDCol" prefWidth="40.0" text="ID" />
+          <TableColumn fx:id="customerNameCol" prefWidth="150.0" text="Name" />
+            <TableColumn fx:id="addressCol" prefWidth="150.0" text="Address " />
+            <TableColumn fx:id="cityCol" prefWidth="100.0" text="City" />
+            <TableColumn fx:id="countryCol" prefWidth="125.0" text="Country" />
+            <TableColumn fx:id="phoneCol" prefWidth="125.0" text="Phone Number" />
+            <TableColumn fx:id="activeCol" minWidth="0.0" prefWidth="50.0" text="Active" />
+        </columns>
+      </TableView>
+      <Button fx:id="addBtn" layoutX="23.0" layoutY="398.0" mnemonicParsing="false" onAction="#handleAddBtn" prefHeight="27.0" prefWidth="60.0" text="Add" />
+      <Button fx:id="modifyBtn" layoutX="93.0" layoutY="398.0" mnemonicParsing="false" onAction="#handleModifyBtn" text="Modify" />
+      <Button fx:id="deleteBtn" layoutX="163.0" layoutY="398.0" mnemonicParsing="false" onAction="#handleDeleteBtn" prefHeight="27.0" prefWidth="60.0" text="Delete" />
+      <Button fx:id="backBtn" layoutX="673.0" layoutY="398.0" mnemonicParsing="false" onAction="#handleBackBtn" prefHeight="45.0" prefWidth="85.0" text="Back" />
+   </children>
+</AnchorPane>

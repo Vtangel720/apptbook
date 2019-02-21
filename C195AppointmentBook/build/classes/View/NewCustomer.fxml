@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="475.0" prefWidth="355.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.NewCustomer">
+   <children>
+      <VBox alignment="TOP_RIGHT" layoutX="15.0" layoutY="54.0" prefHeight="258.0" prefWidth="93.0" spacing="29.7">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID:" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+            <Text lineSpacing="4.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address:" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Phone:" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="City:" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Country:" />
+            <Text layoutX="61.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Created By:" />
+            <Text layoutX="61.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Active:" />
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </VBox>
+      <Text layoutX="94.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Customer">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <VBox alignment="TOP_RIGHT" layoutX="116.0" layoutY="54.0" prefHeight="258.0" prefWidth="181.0" spacing="18.5">
+         <children>
+            <TextField fx:id="idTxtFld" />
+            <TextField fx:id="nameTxtFld" />
+            <TextField fx:id="addressTxtFld" />
+            <TextField fx:id="phoneTxtFld" />
+            <ComboBox fx:id="cityComboBx" onAction="#handleCitySelected" prefWidth="181.0" promptText="Phoenix, Arizona" />
+            <ComboBox fx:id="countryComboBx" layoutX="10.0" layoutY="194.0" prefWidth="181.0" promptText="United States" />
+            <TextField fx:id="createdByTxtFld" layoutX="10.0" layoutY="240.0" />
+            <TextField fx:id="activeTxtFld" layoutX="10.0" layoutY="286.0" />
+         </children>
+      </VBox>
+      <Button fx:id="clearBtn" layoutX="41.0" layoutY="424.0" mnemonicParsing="false" onAction="#handleClearBtn" text="Clear" />
+      <Button fx:id="addBtn" layoutX="242.0" layoutY="414.0" mnemonicParsing="false" onAction="#handleAddBtn" prefHeight="47.0" prefWidth="72.0" text="Add" />
+      <Button fx:id="backBtn" layoutX="106.0" layoutY="424.0" mnemonicParsing="false" onAction="#handleBackBtn" prefHeight="28.0" prefWidth="53.0" text="Back" />
+   </children>
+</AnchorPane>

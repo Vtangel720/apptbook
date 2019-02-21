@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ModifyAppointment">
+   <children>
+      <Button fx:id="updateBtn" layoutX="352.0" layoutY="441.0" mnemonicParsing="false" onAction="#handleUpdateBtn" prefHeight="45.0" prefWidth="68.0" text="Update" />
+      <Button fx:id="clearBtn" layoutX="152.0" layoutY="450.0" mnemonicParsing="false" onAction="#handleClearBtn" text="Clear" />
+      <VBox layoutX="152.0" layoutY="58.0" prefHeight="237.0" prefWidth="202.0" spacing="22.0">
+         <children>
+            <TextField fx:id="apptIdTxtFld" maxWidth="200.0" />
+            <ComboBox fx:id="customerComboBx" prefWidth="200.0" />
+            <DatePicker fx:id="datePicker" prefHeight="27.0" prefWidth="203.0" />
+            <ComboBox fx:id="startTimeComboBx" onAction="#handleTimeSelection" prefWidth="200.0" />
+            <TextField fx:id="endTxtFld" />
+            <ComboBox fx:id="locationComboBx" onAction="#handleContactSelection" prefWidth="200.0" />
+            <TextField fx:id="contactTxtFld" />
+            <ComboBox fx:id="apptTypeComboBx" prefWidth="200.0" />
+         </children>
+      </VBox>
+      <VBox alignment="TOP_RIGHT" layoutX="25.0" layoutY="61.0" prefHeight="267.0" prefWidth="120.0" spacing="32.5">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment ID:" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Customer:" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" />
+            <Text layoutX="22.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Time:" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="End Time:" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Location:" />
+            <Text layoutX="73.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact:" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Type:" />
+         </children>
+      </VBox>
+      <Text layoutX="124.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modify Appointment">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="backBtn" layoutX="277.0" layoutY="450.0" mnemonicParsing="false" onAction="#handleBackBtn" text="Back" />
+   </children>
+</AnchorPane>
+

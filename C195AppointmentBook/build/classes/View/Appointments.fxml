@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="525.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AppointmentController">
+   <children>
+      <TableView fx:id="appointmentTbl" layoutX="14.0" layoutY="69.0" prefHeight="396.0" prefWidth="623.0">
+        <columns>
+            <TableColumn fx:id="appointmentIDCol" prefWidth="50.0" text="Appt ID" />
+          <TableColumn fx:id="customIDCol" prefWidth="50.0" text="Cust ID" />
+          <TableColumn fx:id="locationCol" prefWidth="145.0" text="Location" />
+            <TableColumn fx:id="dateCol" minWidth="4.0" prefWidth="100.0" resizable="false" text="Date" />
+            <TableColumn fx:id="startTimeCol" minWidth="4.0" prefWidth="100.0" resizable="false" text="Start" />
+            <TableColumn fx:id="endTimeCol" minWidth="0.0" prefWidth="100.0" resizable="false" text="End" />
+            <TableColumn fx:id="typeCol" prefWidth="85.0" resizable="false" text="Type" />
+        </columns>
+      </TableView>
+      <Text layoutX="265.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointments" textAlignment="CENTER">
+         <font>
+            <Font name="Bradley Hand Bold" size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="645.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Information:" />
+      <Button fx:id="newApptBtn" layoutX="14.0" layoutY="474.0" mnemonicParsing="false" onAction="#handleAddAppt" prefHeight="27.0" prefWidth="128.0" text="New Appointment" />
+      <Button fx:id="modifyApptBtn" layoutX="153.0" layoutY="474.0" mnemonicParsing="false" onAction="#handleModifyAppt" text="Modify Appointment" />
+      <Button fx:id="deleteApptBtn" layoutX="306.0" layoutY="474.0" mnemonicParsing="false" onAction="#handleDeleteAppt" prefHeight="27.0" prefWidth="141.0" text="Delete Appointment" />
+      <Button fx:id="ExitBtn" layoutX="801.0" layoutY="466.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="50.0" prefWidth="60.0" text="Exit" />
+      <Text layoutX="416.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View:" />
+      <RadioButton fx:id="weekRadioBtn" layoutX="453.0" layoutY="45.0" mnemonicParsing="false" onAction="#handleWeekSelected" selected="true" text="Week (Default)">
+         <toggleGroup>
+            <ToggleGroup fx:id="View" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="monthRadioBtn" layoutX="573.0" layoutY="45.0" mnemonicParsing="false" onAction="#handleMonthSelected" text="Month" toggleGroup="$View" />
+      <Button fx:id="contactMgmBtn" layoutX="646.0" layoutY="466.0" mnemonicParsing="false" onAction="#handleContactMgm" prefHeight="50.0" prefWidth="150.0" text="Contact Management" />
+      <Button fx:id="rptBtn" layoutX="554.0" layoutY="467.0" mnemonicParsing="false" onAction="#handleRpt" prefHeight="50.0" prefWidth="83.0" text="Reports" />
+      <TableView fx:id="customerTb" layoutX="645.0" layoutY="68.0" prefHeight="396.0" prefWidth="216.0">
+        <columns>
+          <TableColumn fx:id="custIDCol" editable="false" prefWidth="31.0" sortable="false" text="ID" />
+          <TableColumn fx:id="custNameCol" editable="false" prefWidth="134.0" sortable="false" text="Name" />
+            <TableColumn fx:id="activeCol" minWidth="7.0" prefWidth="55.0" text="Active" visible="false" />
+        </columns>
+      </TableView>
+      <MenuBar layoutX="14.0" layoutY="40.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Reports">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#aptByMonthReport" text="Appointment Type By Month" />
+                  <MenuItem mnemonicParsing="false" onAction="#consultantSchedules" text="Consultant Schedules" />
+                  <MenuItem mnemonicParsing="false" onAction="#customerTotalAppointments" text="Customer Total Appointments" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
